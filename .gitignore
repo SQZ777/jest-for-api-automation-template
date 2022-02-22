@@ -1,5 +1,5 @@
 *.html
-/jest_html_reporters
+jest_html_reporters/
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
 
