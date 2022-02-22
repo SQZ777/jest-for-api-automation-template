@@ -4,6 +4,7 @@
     "eslint-config-google": "^0.14.0",
     "jest": "^27.5.1",
     "jest-html-reporter": "^3.4.2",
+    "jest-html-reporters": "^3.0.5",
     "pre-commit": "^1.2.2"
   },
   "scripts": {
