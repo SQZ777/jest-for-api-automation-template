@@ -5,3 +5,11 @@ repos:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
+-   repo: local
+    hooks:
+    -   id: eslint
+        name: npx eslint
+        entry: eslint
+        language: system
+        types: [javascript]
+        require_serial: true
