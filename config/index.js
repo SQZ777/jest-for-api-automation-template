@@ -1,9 +1,6 @@
 const _ = require('lodash');
+const defaults = require('./defaults');
 
-config = {
-  test: 123,
-};
-
-config = _.merge({}, require('./envs/prod.js'), config);
+const config = _.merge({}, require('./envs/prod.js'), defaults);
 
 module.exports = config;

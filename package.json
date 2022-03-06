@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "dotenv": "^16.0.0",
     "eslint-config-google": "^0.14.0",
     "jest": "^27.5.1",
     "jest-html-reporters": "^3.0.5",
