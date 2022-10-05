@@ -22,14 +22,14 @@ const products = [
 ];
 
 app.get('/products', function(req, res) {
-  res.send(products);
+  console.log(req.body);
+  return res.send(products);
 });
 
 app.post('/products/update', function(req, res) {
   let productsTmp = {message: 'nothing change'};
-  console.log(req.body);
   if (req.body.productId === undefined) {
-    res.status(400).send('lack field: productId');
+    return res.status(400).send('lack field: productId');
   }
   for (let index = 0; index < products.length; index++) {
     if (products[index].productId === req.body.productId) {
@@ -37,11 +37,10 @@ app.post('/products/update', function(req, res) {
       productsTmp = products[index];
     }
   }
-  res.send(productsTmp);
+  return res.send(productsTmp);
 });
 
 app.post('/products/create', function(req, res) {
-  console.log(req.body);
   const product = {
     productId: req.body.productId,
     productName: req.body.productName,
@@ -53,11 +52,11 @@ app.post('/products/create', function(req, res) {
     product.productName === undefined ||
     product.productPrice === undefined
   ) {
-    res.status(400).send({message: 'request is illegal'});
+    return res.status(400).send({message: 'request is illegal'});
   }
 
   products.push(product);
-  res.send(products);
+  return res.send(products);
 });
 
 app.listen(port, () => {
