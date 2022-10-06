@@ -1,4 +1,4 @@
-## Nari Bashira
+## Jest for API automation template
 API automation in Jest framework
 
 ## Environment setup
