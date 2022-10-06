@@ -15,11 +15,15 @@ BASE_URL={{value}}
 ```
 
 ## Execute
-Run target case:
+Run express server
 ```
-npm test ./transactionApi.test.js -t="${your target case}"
+node app.js
 ```
+
 Run all cases:
 ```
 npm test
 ```
+
+
+
